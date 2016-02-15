@@ -13,14 +13,20 @@
  * the canvas' context (ctx) object globally available to make writing app.js
  * a little simpler to work with.
  */
+<<<<<<< HEAD
 var deaths =0;
+=======
+>>>>>>> 0ded8bc67a8eaaf451a081e9b446127f875fc170
 
 var Engine = (function(global) {
     /* Predefine the variables we'll be using within this scope,
      * create the canvas element, grab the 2D context for that canvas
      * set the canvas elements height/width and add it to the DOM.
      */
+<<<<<<< HEAD
 	 
+=======
+>>>>>>> 0ded8bc67a8eaaf451a081e9b446127f875fc170
     var doc = global.document,
         win = global.window,
         canvas = doc.createElement('canvas'),
@@ -41,16 +47,23 @@ var Engine = (function(global) {
          * would be the same for everyone (regardless of how fast their
          * computer is) - hurray time!
          */
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 0ded8bc67a8eaaf451a081e9b446127f875fc170
         var now = Date.now(),
             dt = (now - lastTime) / 1000.0;
 
         /* Call our update/render functions, pass along the time delta to
          * our update function since it may be used for smooth animation.
          */
+<<<<<<< HEAD
 		 //if(deaths < 5)
 			 update(dt);
 		
+=======
+        update(dt);
+>>>>>>> 0ded8bc67a8eaaf451a081e9b446127f875fc170
         render();
 
         /* Set our lastTime variable which is used to determine the time delta
@@ -84,7 +97,11 @@ var Engine = (function(global) {
      * on the entities themselves within your app.js file).
      */
     function update(dt) {
+<<<<<<< HEAD
        return updateEntities(dt);
+=======
+        updateEntities(dt);
+>>>>>>> 0ded8bc67a8eaaf451a081e9b446127f875fc170
         // checkCollisions();
     }
 
@@ -96,6 +113,7 @@ var Engine = (function(global) {
      * render methods.
      */
     function updateEntities(dt) {
+<<<<<<< HEAD
 		
         allEnemies.forEach(function(enemy) {
 			
@@ -108,6 +126,12 @@ var Engine = (function(global) {
 		
 		
 	   
+=======
+        allEnemies.forEach(function(enemy) {
+            enemy.update(dt);
+        });
+        player.update();
+>>>>>>> 0ded8bc67a8eaaf451a081e9b446127f875fc170
     }
 
     /* This function initially draws the "game level", it will then call
@@ -174,8 +198,11 @@ var Engine = (function(global) {
      */
     function reset() {
         // noop
+<<<<<<< HEAD
 		 if (deaths >= 5)
 	   confirm("You Lost :C");
+=======
+>>>>>>> 0ded8bc67a8eaaf451a081e9b446127f875fc170
     }
 
     /* Go ahead and load all of the images we know we're going to need to

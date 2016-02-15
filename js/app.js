@@ -1,21 +1,28 @@
+<<<<<<< HEAD
 //Distancia de movimientos
 var cantPasos_X= 70
 var cantPasos_Y= 70;
+=======
+>>>>>>> 0ded8bc67a8eaaf451a081e9b446127f875fc170
 // Enemies our player must avoid
 var Enemy = function() {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
+<<<<<<< HEAD
     this.x = 0;
     this.y = 0;
     this.width = 50;
     this.height = 80;
     this.speed = Math.floor(Math.random()* 5) + 2;
+=======
+>>>>>>> 0ded8bc67a8eaaf451a081e9b446127f875fc170
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
 };
 
+<<<<<<< HEAD
 
 Enemy.prototype.collisions = function(player) {
       if (this.x < player.x + player.width  && this.x + this.width  > player.x &&
@@ -28,12 +35,15 @@ Enemy.prototype.collisions = function(player) {
 	return false;	   
 };
 
+=======
+>>>>>>> 0ded8bc67a8eaaf451a081e9b446127f875fc170
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+<<<<<<< HEAD
 
     this.x += (cantPasos_X * dt * this.speed); 
     if(this.x > 480){
@@ -47,6 +57,8 @@ Enemy.prototype.update = function(dt) {
 		return 1;
 	}
 	return 0;
+=======
+>>>>>>> 0ded8bc67a8eaaf451a081e9b446127f875fc170
 };
 
 // Draw the enemy on the screen, required method for game
@@ -58,6 +70,7 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 
+<<<<<<< HEAD
 var Player = function(){
     Enemy.call(this);
     this.sprite = 'images/char-boy.png';
@@ -101,10 +114,13 @@ Player.prototype.handleInput = function(direction){
 };
 
 
+=======
+>>>>>>> 0ded8bc67a8eaaf451a081e9b446127f875fc170
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
+<<<<<<< HEAD
 var allEnemies = [];
 for(var i = 0 ; i <= 3 ; i++){
     var enemy = new Enemy();
@@ -114,6 +130,9 @@ for(var i = 0 ; i <= 3 ; i++){
 
 }
 var player = new Player();
+=======
+
+>>>>>>> 0ded8bc67a8eaaf451a081e9b446127f875fc170
 
 
 // This listens for key presses and sends the keys to your
