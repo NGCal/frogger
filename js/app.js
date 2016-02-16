@@ -39,7 +39,9 @@ Enemy.prototype.update = function(dt) {
 
     this.x += (cantPasos_X * dt * this.speed); 
     if(this.x > 480){
+
         this.speed = Math.floor(Math.random()*2) + 1;
+
         this.x = 0;
         this.y = (cantPasos_Y/0.92) * (Math.floor(Math.random()*3) + 1);
 
@@ -72,12 +74,16 @@ Player.prototype = new Enemy();
 Player.prototype.update = function(dt) {
 	
     if(player.y < 20){
-		 return 1;
+
+		
          this.x = 202;
 		 this.y = 424;
-		 
+		  return 1;
     }
 	console.log(this.x,this.y);
+
+    
+
 	return 0;
      
 };

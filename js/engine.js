@@ -31,16 +31,18 @@ var Engine = (function(global) {
     canvas.height = 606;
     doc.body.appendChild(canvas);
 	
+
 	/*Variables para el diseño de los canvas*/
 			var numRows = 6,
             numCols = 5,
             row, col;
 
+
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
      */
     function main() {
-		
+
         /* Get our time delta information which is required if your game
          * requires smooth animation. Because everyone's computer processes
          * instructions at different speeds we need a constant value that
@@ -56,7 +58,9 @@ var Engine = (function(global) {
          */
 		 
 		 
-			 //update(dt);
+
+			
+
 		
 
         update(dt);
@@ -70,6 +74,7 @@ var Engine = (function(global) {
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
          */
+
 		if (deaths >= 5){
 			 confirm("Que lastima haz perdio, :'C (Presina f5 para volver a jugar)");
 			 reset();
@@ -168,6 +173,7 @@ var Engine = (function(global) {
                 'images/street.png',   // Row 3 of 3 of stone
                 'images/stone-block.png',   // Row 1 of 2 of grass
                 'images/stone-block.png'    // Row 2 of 2 of grass
+
             ];
 
         /* Loop through the number of rows and columns we've defined above
@@ -184,7 +190,7 @@ var Engine = (function(global) {
                  * we're using them over and over.
                  */
                 ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 83);
-				
+
             }
         }
 
@@ -215,17 +221,27 @@ var Engine = (function(global) {
         // noop
 		
 	   //confirm("You Lost :C");
-  		
+
+			
+
         for (row = 0; row < numRows; row++) {
             for (col = 0; col < numCols; col++) {
                 ctx.drawImage(Resources.get('images/street.png'), col * 101, row * 83);
             }
+
 		}
 		ctx.drawImage(Resources.get('images/enemy.png'), 200, 170);
 	
     }
 	
 	/*function win() {
+=======
+	}
+	
+    }
+	
+	function win() {
+>>>>>>> 67efa9d314cbf2b4b34836f5d5bf0dc1d6999888
         // noop
 		
 	   //confirm("You Lost :C");
@@ -240,7 +256,11 @@ var Engine = (function(global) {
             }
 	}
 	
+<<<<<<< HEAD
     }*/
+
+    
+
 
     /* Go ahead and load all of the images we know we're going to need to
      * draw our game level. Then set init as the callback method, so that when
