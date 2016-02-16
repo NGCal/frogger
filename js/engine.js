@@ -14,7 +14,11 @@
  * a little simpler to work with.
  */
 var deaths =0;
+<<<<<<< HEAD
 var wins = 0;
+=======
+
+>>>>>>> 334504054e5188ab9ad14d09e1f0032620662bba
 var Engine = (function(global) {
     /* Predefine the variables we'll be using within this scope,
      * create the canvas element, grab the 2D context for that canvas
@@ -30,7 +34,10 @@ var Engine = (function(global) {
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 334504054e5188ab9ad14d09e1f0032620662bba
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
@@ -50,7 +57,11 @@ var Engine = (function(global) {
          * our update function since it may be used for smooth animation.
          */
 		 
+<<<<<<< HEAD
 		 
+=======
+		 //if(deaths < 5)
+>>>>>>> 334504054e5188ab9ad14d09e1f0032620662bba
 			 update(dt);
 		
 
@@ -65,6 +76,7 @@ var Engine = (function(global) {
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
          */
+<<<<<<< HEAD
 		 if(deaths < 5 && wins < 5){
 		 win.requestAnimationFrame(main);
 		 }
@@ -77,6 +89,9 @@ var Engine = (function(global) {
 			 win();
 		 }
 		 
+=======
+        win.requestAnimationFrame(main);
+>>>>>>> 334504054e5188ab9ad14d09e1f0032620662bba
     }
 
     /* This function does some initial setup that should only occur once,
@@ -84,11 +99,17 @@ var Engine = (function(global) {
      * game loop.
      */
     function init() {
+<<<<<<< HEAD
        
         lastTime = Date.now();
         main();
 		// reset();
 		win();
+=======
+        reset();
+        lastTime = Date.now();
+        main();
+>>>>>>> 334504054e5188ab9ad14d09e1f0032620662bba
     }
 
     /* This function is called by main (our game loop) and itself calls all
@@ -125,7 +146,11 @@ var Engine = (function(global) {
 
         });
 		
+<<<<<<< HEAD
         wins += player.update();
+=======
+        player.update();
+>>>>>>> 334504054e5188ab9ad14d09e1f0032620662bba
 		//console.log(deaths);
 		
 		
@@ -149,12 +174,21 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
+<<<<<<< HEAD
                 'images/grass-block.png',   // Top row is water
                 'images/street.png',   // Row 1 of 3 of stone
                 'images/street.png',   // Row 2 of 3 of stone
                 'images/street.png',   // Row 3 of 3 of stone
                 'images/stone-block.png',   // Row 1 of 2 of grass
                 'images/stone-block.png'    // Row 2 of 2 of grass
+=======
+                'images/water-block.png',   // Top row is water
+                'images/stone-block.png',   // Row 1 of 3 of stone
+                'images/stone-block.png',   // Row 2 of 3 of stone
+                'images/stone-block.png',   // Row 3 of 3 of stone
+                'images/grass-block.png',   // Row 1 of 2 of grass
+                'images/grass-block.png'    // Row 2 of 2 of grass
+>>>>>>> 334504054e5188ab9ad14d09e1f0032620662bba
             ],
             numRows = 6,
             numCols = 5,
@@ -202,6 +236,7 @@ var Engine = (function(global) {
      */
     function reset() {
         // noop
+<<<<<<< HEAD
 		
 	   //confirm("You Lost :C");
       var numRows = 6,
@@ -232,6 +267,11 @@ var Engine = (function(global) {
             }
 	}
 	
+=======
+		//if (deaths >= 5)
+	   //confirm("You Lost :C");
+
+>>>>>>> 334504054e5188ab9ad14d09e1f0032620662bba
     }
 
     /* Go ahead and load all of the images we know we're going to need to
@@ -245,9 +285,13 @@ var Engine = (function(global) {
         'images/enemy-bug.png',
         'images/char-boy.png',
 		'images/enemy.png',
+<<<<<<< HEAD
 		'images/nathalia.png',
 		'images/street.png',
 		
+=======
+		'images/nathalia.png'
+>>>>>>> 334504054e5188ab9ad14d09e1f0032620662bba
     ]);
     Resources.onReady(init);
 

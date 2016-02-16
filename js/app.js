@@ -39,8 +39,13 @@ Enemy.prototype.update = function(dt) {
 
     this.x += (cantPasos_X * dt * this.speed); 
     if(this.x > 480){
+<<<<<<< HEAD
         this.speed = Math.floor(Math.random()) + 1;
         this.x = 0;
+=======
+        this.speed = Math.floor(Math.random()*2) + 1;
+        this.x = -18;
+>>>>>>> 334504054e5188ab9ad14d09e1f0032620662bba
         this.y = (cantPasos_Y/0.92) * (Math.floor(Math.random()*3) + 1);
 
     }
@@ -74,9 +79,13 @@ Player.prototype.update = function(dt) {
     if(player.y < 20){
          this.x = 202;
 		 this.y = 424;
+<<<<<<< HEAD
 		 return 1;
     }
 	return 0;
+=======
+    }
+>>>>>>> 334504054e5188ab9ad14d09e1f0032620662bba
      
 };
 Player.prototype.handleInput = function(direction){
@@ -110,10 +119,17 @@ Player.prototype.handleInput = function(direction){
 // Place the player object in a variable called player
 
 var allEnemies = [];
+<<<<<<< HEAD
 for(var i = 0 ; i < 3 ; i++){
     var enemy = new Enemy();
     enemy.x = cantPasos_X * Math.floor(Math.random()*3 +1);
     enemy.y = Math.floor(Math.random()*3) * (cantPasos_Y/0.92);
+=======
+for(var i = 0 ; i <= 3 ; i++){
+    var enemy = new Enemy();
+    enemy.x = cantPasos_X * Math.floor(Math.random()*3 +1);
+    enemy.y = Math.floor(Math.random()*3 +1) * (cantPasos_Y/0.92);
+>>>>>>> 334504054e5188ab9ad14d09e1f0032620662bba
     allEnemies.push(enemy);
 
 }
